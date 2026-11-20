@@ -1,0 +1,1276 @@
+/* ================================
+   NEW SMILE — RESPONSIVE STYLES
+================================ */
+
+:root {
+    --black: #111111;
+    --dark: #191919;
+    --gray: #777777;
+    --light-gray: #eeeeee;
+    --bg: #ffffff;
+    --soft: #f6f6f6;
+    --font: 'Manrope', sans-serif;
+    --transition: .3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--black);
+    background: var(--bg);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    height: 86px;
+    background: rgba(255,255,255,.96);
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+}
+
+.header-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* LOGO — НЕ ИЗМЕНЯЛ */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 43px;
+    height: 43px;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: block;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+}
+
+.logo-text span,
+.footer-logo span {
+    font-weight: 400;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav a {
+    color: #555;
+    font-size: 12px;
+    font-weight: 700;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.nav a:hover {
+    color: #000;
+}
+
+.header-phone {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.header-phone i {
+    font-size: 14px;
+}
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--black);
+    flex-shrink: 0;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+
+.btn {
+    min-height: 55px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: var(--transition);
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn-dark {
+    background: var(--black);
+    color: #fff;
+}
+
+.btn-dark:hover {
+    background: #383838;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: #d9d9d9;
+    color: #111;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    border-color: #111;
+    background: #fff;
+}
+
+.btn-white {
+    background: #fff;
+    color: #111;
+}
+
+.btn-white:hover {
+    background: #e9e9e9;
+    transform: translateY(-2px);
+}
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    padding: 95px 0 105px;
+    background: #fafafa;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #777;
+    margin-bottom: 23px;
+}
+
+.eyebrow-line {
+    width: 28px;
+    height: 1px;
+    background: #111;
+    flex-shrink: 0;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 1.1;
+    letter-spacing: -3.5px;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #929292;
+}
+
+.hero-description {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 480px;
+    margin: 25px 0 30px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-info {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.hero-info div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 11px;
+    color: #666;
+}
+
+.hero-info i {
+    color: #111;
+    font-size: 14px;
+}
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 35px;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: clamp(34px, 4vw, 49px);
+    letter-spacing: -2px;
+    line-height: 1.17;
+    font-weight: 800;
+}
+
+.section-heading > p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 340px;
+    padding-bottom: 5px;
+}
+
+/* ================================
+   ABOUT SLIDER
+================================ */
+
+.about-section {
+    background: #fff;
+}
+
+.clinic-slider {
+    position: relative;
+    overflow: hidden;
+    touch-action: pan-y;
+    background: #f5f5f5;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform .55s cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+}
+
+.clinic-slide {
+    min-width: 100%;
+    height: 560px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clinic-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0 0;
+}
+
+.slider-counter {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #999;
+}
+
+.current-slide,
+#reviewCurrent {
+    color: #111;
+}
+
+.counter-divider {
+    height: 1px;
+    width: 35px;
+    background: #ccc;
+}
+
+.slider-buttons {
+    display: flex;
+    gap: 9px;
+}
+
+.slider-btn {
+    width: 46px;
+    height: 46px;
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #111;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 14px;
+}
+
+.slider-btn:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+/* ================================
+   SERVICES
+================================ */
+
+.services-section {
+    background: #f7f7f7;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 28px 25px 22px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #bbb;
+    box-shadow: 0 15px 35px rgba(0,0,0,.04);
+}
+
+.service-icon {
+    width: 49px;
+    height: 49px;
+    display: grid;
+    place-items: center;
+    background: #f2f2f2;
+    color: #111;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.5;
+    max-width: 260px;
+    margin-bottom: auto;
+    padding-bottom: 20px;
+}
+
+.service-bottom {
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: #888;
+}
+
+.service-bottom strong {
+    color: #111;
+    font-size: 14px;
+}
+
+/* ================================
+   WORKS SLIDER
+================================ */
+
+.works-section {
+    background: #fff;
+}
+
+.works-slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.works-track {
+    display: flex;
+    width: 100%;
+    transition: transform .55s cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+}
+
+.works-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    height: 540px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.works-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .5s ease;
+    pointer-events: none;
+}
+
+.works-slider:hover .works-slide img {
+    transform: scale(1.01);
+}
+
+.works-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 22px;
+}
+
+.works-counter {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 12px;
+    font-weight: 800;
+    color: #999;
+}
+
+#worksCurrent {
+    color: #111;
+}
+
+/* ================================
+   REVIEWS
+================================ */
+
+.reviews-section {
+    background: #f7f7f7;
+}
+
+.reviews-controls {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.reviews-window {
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 16px;
+    transition: transform .45s ease;
+    will-change: transform;
+}
+
+.review-card {
+    min-width: calc((100% - 32px) / 3);
+    background: #fff;
+    padding: 30px 27px;
+    display: flex;
+    flex-direction: column;
+    min-height: 330px;
+    border: 1px solid #eee;
+}
+
+.review-stars {
+    display: flex;
+    gap: 5px;
+    color: #111;
+    font-size: 12px;
+    margin-bottom: 23px;
+}
+
+.review-card > p {
+    font-size: 12px;
+    line-height: 1.9;
+    color: #555;
+    margin-bottom: 28px;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid #eee;
+}
+
+.review-avatar {
+    width: 39px;
+    height: 39px;
+    background: #111;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.review-author div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.review-author strong {
+    font-size: 11px;
+}
+
+.review-author span {
+    font-size: 10px;
+    color: #999;
+}
+
+/* ================================
+   CTA
+================================ */
+
+.cta-section {
+    background: #111;
+    color: #fff;
+    padding: 85px 0;
+}
+
+.cta-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+
+.eyebrow-light {
+    color: #aaa;
+}
+
+.eyebrow-light .eyebrow-line {
+    background: #fff;
+}
+
+.cta-inner h2 {
+    font-size: clamp(34px, 4vw, 50px);
+    line-height: 1.2;
+    letter-spacing: -2px;
+}
+
+.cta-inner p {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 17px;
+}
+
+/* ================================
+   CONTACTS
+================================ */
+
+.contacts-section {
+    background: #fff;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 30px;
+}
+
+.contacts-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item {
+    min-height: 95px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    position: relative;
+}
+
+.contact-icon {
+    width: 47px;
+    height: 47px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #f2f2f2;
+    font-size: 17px;
+}
+
+.contact-item > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.contact-item span {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #999;
+}
+
+.contact-item strong {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contact-arrow {
+    margin-left: auto;
+    font-size: 12px;
+    color: #aaa;
+    flex-shrink: 0;
+}
+
+.contact-button {
+    margin-top: 25px;
+    align-self: flex-start;
+}
+
+.map-container {
+    height: 440px;
+    background: #f2f2f2;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 28px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.footer-inner p {
+    font-size: 10px;
+    color: #999;
+}
+
+.footer-inner > a:last-child {
+    font-size: 20px;
+}
+
+/* ================================
+   TABLETS
+================================ */
+
+@media (max-width: 1050px) {
+
+    .nav {
+        gap: 14px;
+    }
+
+    .nav a {
+        font-size: 10px;
+    }
+
+    .header-inner {
+        gap: 16px;
+    }
+
+    .logo img {
+        width: 39px;
+        height: 39px;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .header-phone {
+        font-size: 11px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .review-card {
+        min-width: calc((100% - 16px) / 2);
+    }
+
+    .clinic-slide {
+        height: 460px;
+    }
+
+    .works-slide {
+        height: 460px;
+    }
+}
+
+/* ================================
+   MOBILE MENU / TABLETS
+================================ */
+
+@media (max-width: 800px) {
+
+    html {
+        scroll-padding-top: 80px;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .header {
+        height: 72px;
+    }
+
+    .header-inner {
+        gap: 12px;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 21px;
+        border-bottom: 1px solid #eee;
+        box-shadow: 0 15px 20px rgba(0,0,0,.04);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        font-size: 13px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .header-phone {
+        margin-left: auto;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 75px 0 80px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 8vw, 62px);
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .section-heading > p {
+        max-width: 500px;
+    }
+
+    .clinic-slide {
+        height: 420px;
+    }
+
+    .works-slide {
+        height: 420px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        height: 350px;
+    }
+
+    .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* ================================
+   PHONES
+================================ */
+
+@media (max-width: 550px) {
+
+    .container {
+        width: calc(100% - 36px);
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .header {
+        height: 68px;
+    }
+
+    .header-inner {
+        gap: 8px;
+    }
+
+    .nav {
+        top: 68px;
+    }
+
+    .logo {
+        gap: 7px;
+        min-width: 0;
+    }
+
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo-text {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .header-phone {
+        font-size: 10px;
+        gap: 5px;
+    }
+
+    .header-phone i {
+        font-size: 10px;
+    }
+
+    .menu-toggle {
+        width: 36px;
+        height: 40px;
+        font-size: 21px;
+    }
+
+    .hero {
+        padding: 58px 0 65px;
+    }
+
+    .eyebrow {
+        font-size: 9px;
+        letter-spacing: 1.3px;
+        gap: 8px;
+        margin-bottom: 19px;
+    }
+
+    .eyebrow-line {
+        width: 21px;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 11vw, 49px);
+        letter-spacing: -2.2px;
+        line-height: 1.13;
+    }
+
+    .hero-description {
+        font-size: 13px;
+        line-height: 1.8;
+        margin: 21px 0 25px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        min-height: 53px;
+    }
+
+    .hero-info {
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 28px;
+    }
+
+    .hero-info div {
+        font-size: 11px;
+    }
+
+    .section-heading {
+        gap: 13px;
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+        font-size: 35px;
+        letter-spacing: -1.5px;
+    }
+
+    .section-heading > p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .clinic-slide {
+        height: 340px;
+    }
+
+    .slider-controls {
+        padding-top: 17px;
+    }
+
+    .slider-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 11px;
+    }
+
+    .service-card {
+        min-height: 165px;
+        padding: 22px;
+    }
+
+    .service-icon {
+        width: 43px;
+        height: 43px;
+        font-size: 19px;
+        margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+        font-size: 14px;
+        padding-bottom: 17px;
+    }
+
+    .service-bottom {
+        padding-top: 13px;
+    }
+
+    /* WORKS SLIDER */
+
+    .works-slide {
+        height: 350px;
+    }
+
+    .works-slide img {
+        object-fit: cover;
+    }
+
+    .works-controls {
+        padding-top: 17px;
+    }
+
+    .works-counter {
+        font-size: 11px;
+        gap: 10px;
+    }
+
+    .reviews-controls {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .reviews-window {
+        margin-right: -2px;
+    }
+
+    .reviews-track {
+        gap: 12px;
+    }
+
+    .review-card {
+        min-width: 100%;
+        padding: 24px 21px;
+        min-height: 300px;
+    }
+
+    .review-stars {
+        margin-bottom: 18px;
+    }
+
+    .review-card > p {
+        font-size: 12px;
+        line-height: 1.8;
+        margin-bottom: 22px;
+    }
+
+    .cta-section {
+        padding: 62px 0;
+    }
+
+    .cta-inner {
+        gap: 28px;
+    }
+
+    .cta-inner h2 {
+        font-size: 35px;
+        letter-spacing: -1.5px;
+    }
+
+    .cta-inner p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .cta-inner .btn {
+        width: 100%;
+        min-height: 54px;
+        padding: 0 12px;
+        font-size: 11px;
+        gap: 8px;
+    }
+
+    .contacts-grid {
+        gap: 22px;
+    }
+
+    .contact-item {
+        min-height: 83px;
+        gap: 12px;
+    }
+
+    .contact-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 15px;
+    }
+
+    .contact-item strong {
+        font-size: 11px;
+    }
+
+    .contact-item span {
+        font-size: 8px;
+    }
+
+    .contact-arrow {
+        font-size: 10px;
+    }
+
+    .contact-button {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .map-container {
+        height: 280px;
+    }
+
+    .footer {
+        padding: 25px 0;
+    }
+
+    .footer-inner {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .footer-logo {
+        font-size: 17px;
+    }
+
+    .footer-inner p {
+        order: 3;
+        width: 100%;
+        font-size: 9px;
+    }
+
+    .footer-inner > a:last-child {
+        font-size: 19px;
+    }
+}
+
+/* ================================
+   SMALL PHONES
+================================ */
+
+@media (max-width: 380px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo-text {
+        font-size: 13px;
+    }
+
+    .header-phone {
+        font-size: 9px;
+    }
+
+    .header-inner {
+        gap: 5px;
+    }
+
+    .menu-toggle {
+        width: 32px;
+        font-size: 19px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+
+    .clinic-slide {
+        height: 290px;
+    }
+
+    .works-slide {
+        height: 290px;
+    }
+
+    .contact-item {
+        gap: 9px;
+    }
+
+    .contact-icon {
+        width: 37px;
+        height: 37px;
+    }
+}
+
+/* ================================
+   ACCESSIBILITY
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
